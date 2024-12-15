@@ -109,7 +109,7 @@ class ChangeHandler(FileSystemEventHandler):
             if pattern in os.path.basename(path):
                 log_event(f"[TEMP] File detected: {path}")
                 # Return False to include temporary files in monitoring
-                return False
+                return True
 
         return False  # Monitor all files, including temporary ones
 
